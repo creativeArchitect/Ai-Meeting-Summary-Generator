@@ -4,7 +4,7 @@ import TranscriptInputCard from './TranscriptInputCard';
 import PromptInputCard from './PromptInputCard';
 import SummaryOutputCard from './SummaryOutputCard';
 import EmailShareCard from './EmailShareCard';
-import { Axis3D, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useEffect } from 'react';
 import axios from 'axios';
 
@@ -16,7 +16,7 @@ const MeetingNotesSummarizer = () => {
   const [subject, setSubject] = useState('Meeting Summary');
   const [isGenerating, setIsGenerating] = useState(false);
   const [isSending, setIsSending] = useState(false);
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
 
   const [toastMessage, setToastMessage] = useState({ type: '', text: '' });
 
@@ -30,7 +30,7 @@ const MeetingNotesSummarizer = () => {
     }
   }, [toastMessage]);
 
-  const uploadHandler = async (formData, selectedFile)=> {
+  const uploadHandler = async (formData: FormData, selectedFile: File)=> {
     try{
       const res = await axios.post(import.meta.env.VITE_UPLOAD_API_URL as string, formData, {
         headers: {

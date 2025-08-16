@@ -8,7 +8,21 @@ const promptTemplates = [
   "Highlight risks and concerns mentioned"
 ];
 
-const PromptInputCard = ({ customPrompt, setCustomPrompt, generateSummary, isGenerating, transcript }) => {
+type PromptInputCardProps = {
+  customPrompt: string;
+  setCustomPrompt: (value: string) => void;
+  generateSummary: () => void;
+  isGenerating: boolean;
+  transcript: string;
+};
+
+const PromptInputCard = ({
+  customPrompt,
+  setCustomPrompt,
+  generateSummary,
+  isGenerating,
+  transcript
+}: PromptInputCardProps) => {
   return (
     <div className="card w-full bg-base-200 shadow-lg sm:shadow-xl">
       <div className="card-body space-y-4 sm:space-y-6">

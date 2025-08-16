@@ -1,6 +1,25 @@
 import { Mail, Loader2 } from 'lucide-react';
 
-const EmailShareCard = ({ summary, recipient, setRecipient, subject, setSubject, sendEmail, isSending }) => {
+type EmailShareCardProps = {
+  summary: string;
+  recipient: string;
+  setRecipient: (value: string) => void;
+  subject: string;
+  setSubject: (value: string) => void;
+  sendEmail: () => void;
+  isSending: boolean;
+};
+
+
+const EmailShareCard = ({
+  summary,
+  recipient,
+  setRecipient,
+  subject,
+  setSubject,
+  sendEmail,
+  isSending
+}: EmailShareCardProps) => {
   return (
     <div className="card w-full bg-base-200 shadow-lg sm:shadow-xl">
       <div className="card-body space-y-4 sm:space-y-6">

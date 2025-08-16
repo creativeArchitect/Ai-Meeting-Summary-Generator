@@ -1,6 +1,11 @@
 import { FileText, CheckCircle, AlertCircle } from 'lucide-react';
 
-const SummaryOutputCard = ({ summary, setSummary }) => {
+type SummaryOutputCardProps = {
+  summary: string;
+  setSummary: (value: string) => void;
+};
+
+const SummaryOutputCard = ({ summary, setSummary }: SummaryOutputCardProps) => {
   return (
     <div className="card w-full bg-base-200 shadow-lg sm:shadow-xl">
       <div className="card-body space-y-4 sm:space-y-6">

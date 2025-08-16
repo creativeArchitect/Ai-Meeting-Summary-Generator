@@ -1,6 +1,18 @@
 import { Upload, CheckCircle } from 'lucide-react';
 
-const TranscriptInputCard = ({ transcript, setTranscript, handleFileUpload, file }) => {
+type TranscriptInputCardProps = {
+  transcript: string;
+  setTranscript: (value: string) => void;
+  handleFileUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  file: File | null;
+};
+
+const TranscriptInputCard = ({
+  transcript,
+  setTranscript,
+  handleFileUpload,
+  file
+}: TranscriptInputCardProps) => {
   return (
     <div className="card w-full bg-base-200 shadow-lg sm:shadow-xl">
       <div className="card-body space-y-4 sm:space-y-6">
