@@ -38,8 +38,6 @@ const MeetingNotesSummarizer = () => {
         },
       })
     
-      console.log("res after upload: ", res);
-    
       if (res.status === 200) {
         setTranscript(res.data.transcript);
         setToastMessage({
@@ -147,8 +145,6 @@ const MeetingNotesSummarizer = () => {
         summary,
       });
 
-      console.log("res of email transfer: ", email);
-  
       if (res.status === 200) {
         setToastMessage({
           type: "success",
