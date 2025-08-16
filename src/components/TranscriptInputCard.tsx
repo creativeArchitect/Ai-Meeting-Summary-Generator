@@ -1,5 +1,3 @@
-'use client';
-import React from 'react';
 import { Upload, CheckCircle } from 'lucide-react';
 
 const TranscriptInputCard = ({ transcript, setTranscript, handleFileUpload, file }) => {

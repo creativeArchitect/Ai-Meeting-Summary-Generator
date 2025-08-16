@@ -1,5 +1,3 @@
-'use client';
-import React from 'react';
 import { Wand2, Loader2 } from 'lucide-react';
 
 const promptTemplates = [

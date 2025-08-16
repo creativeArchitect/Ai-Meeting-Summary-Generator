@@ -1,5 +1,4 @@
-'use client';
-import React from 'react';
+
 import { Wand2 } from 'lucide-react';
 
 const Header = () => {

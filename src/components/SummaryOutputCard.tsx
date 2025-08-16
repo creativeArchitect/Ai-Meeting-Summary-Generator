@@ -1,5 +1,3 @@
-'use client';
-import React from 'react';
 import { FileText, CheckCircle, AlertCircle } from 'lucide-react';
 
 const SummaryOutputCard = ({ summary, setSummary }) => {

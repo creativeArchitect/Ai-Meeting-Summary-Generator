@@ -1,5 +1,3 @@
-'use client';
-import React from 'react';
 import { Mail, Loader2 } from 'lucide-react';
 
 const EmailShareCard = ({ summary, recipient, setRecipient, subject, setSubject, sendEmail, isSending }) => {
